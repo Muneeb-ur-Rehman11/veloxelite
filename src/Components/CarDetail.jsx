@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import carsData from '../carsData';
-import LazyLoad from 'react-lazyload';
 import { RemoveScroll } from 'react-remove-scroll';
 
 // SVG Icons
@@ -117,14 +116,12 @@ const CarDetail = () => {
             <div className="space-y-3 sm:space-y-4">
               <div className="relative bg-slate-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-600">
                 {carImages.length > 0 ? (
-                  <LazyLoad height={500} offset={100} once>
-                    <img
-                      src={carImages[activeImage]}
-                      alt={`${car.name} ${car.model} - View ${activeImage + 1}`}
-                      className="w-full h-64 sm:h-80 lg:h-96 xl:h-[500px] object-contain"
-                      loading="lazy"
-                    />
-                  </LazyLoad>
+                  <img
+                    src={carImages[activeImage]}
+                    alt={`${car.name} ${car.model} - View ${activeImage + 1}`}
+                    className="w-full h-64 sm:h-80 lg:h-96 xl:h-[500px] object-contain"
+                    loading="lazy"
+                  />
                 ) : (
                   <div className="w-full h-64 sm:h-80 lg:h-96 xl:h-[500px] flex items-center justify-center bg-slate-700/50">
                     <span className="text-slate-400">No images available</span>
@@ -270,14 +267,12 @@ const CarDetail = () => {
               <Close />
             </button>
 
-            <LazyLoad height={500} offset={100} once>
-              <img
-                src={carImages[modalImageIndex]}
-                alt={`${car.name} view ${modalImageIndex + 1}`}
-                className="w-full h-auto max-h-[85vh] object-contain"
-                loading="lazy"
-              />
-            </LazyLoad>
+            <img
+              src={carImages[modalImageIndex]}
+              alt={`${car.name} view ${modalImageIndex + 1}`}
+              className="w-full h-auto max-h-[85vh] object-contain"
+              loading="lazy"
+            />
           </div>
         </div>
       )}

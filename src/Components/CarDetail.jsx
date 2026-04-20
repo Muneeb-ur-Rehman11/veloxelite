@@ -84,10 +84,10 @@ const CarDetail = () => {
           <h1 className="text-2xl sm:text-4xl font-bold mb-4 sm:mb-6 text-white">
             Car Not Found
           </h1>
-          <Link 
-            to="/" 
+          <Link
+            to="/"
             className="bg-red-600 hover:bg-red-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold transition-all duration-300 inline-flex items-center gap-2 text-sm sm:text-base"
-          > 
+          >
             <ArrowLeft />
             Back to Home
           </Link>
@@ -101,8 +101,8 @@ const CarDetail = () => {
       <div className="min-h-screen bg-gradient-to-br pt-20 from-slate-900 via-blue-900/20 to-slate-900 text-white">
         {/* Header */}
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
-          <Link 
-            to="/" 
+          <Link
+            to="/"
             className="inline-flex items-center gap-2 sm:gap-3 bg-slate-800/80 hover:bg-slate-700/80 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg border border-slate-600 transition-all duration-300 text-sm sm:text-base"
           >
             <ArrowLeft />
@@ -112,7 +112,7 @@ const CarDetail = () => {
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 pb-8 sm:pb-12">
           <div className="mb-0 grid grid-cols-1 xl:grid-cols-2 gap-6 sm:gap-8 max-sm:flex max-sm:flex-col lg:gap-12">
-            
+
             {/* Image Gallery - Dynamic based on available images */}
             <div className="space-y-3 sm:space-y-4">
               <div className="relative bg-slate-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-600">
@@ -136,9 +136,9 @@ const CarDetail = () => {
               {carImages.length > 1 && (
                 <div className={`grid pb-10 gap-2 sm:gap-3 ${
                   carImages.length <= 4 ? 'grid-cols-4' : 
-                  carImages.length <= 6 ? 'grid-cols-3 sm:grid-cols-6' : 
-                  'grid-cols-3 sm:grid-cols-4 lg:grid-cols-6'
-                }`}>
+                  carImages.length <= 6 ? 'grid-cols-3 sm:grid-cols-6' :
+                    'grid-cols-3 sm:grid-cols-4 lg:grid-cols-6'
+                  }`}>
                   {carImages.map((img, index) => (
                     <button
                       key={index}
@@ -148,7 +148,7 @@ const CarDetail = () => {
                       }}
                       className={`relative bg-slate-800/50 rounded-lg overflow-hidden border-2 transition-all duration-300 hover:scale-105 cursor-pointer ${
                         activeImage === index ? 'border-red-500' : 'border-slate-600'
-                      }`}
+                        }`}
                     >
                       <img
                         src={img}
@@ -255,11 +255,11 @@ const CarDetail = () => {
 
       {/* Full-Screen Image Modal with Auto-Carousel */}
       {isModalOpen && (
-        <div 
+        <div
           className="fixed inset-0 bg-black/95 backdrop-blur-sm z-50 flex items-center justify-center p-4"
           onClick={closeModal}
         >
-          <div 
+          <div
             className="relative w-full max-w-6xl max-h-screen flex items-center justify-center"
             onClick={(e) => e.stopPropagation()}
           >

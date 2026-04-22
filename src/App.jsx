@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './Components/Navbar'
 import Footer from './Components/Footer'
 import ScrollToTop from './Components/ScrollToTop'
-import SmoothScroll from './Components/SmoothScroll'
+// import SmoothScroll from './Components/SmoothScroll'
 import Home from './Pages/Home'
 import OurFleet from './Pages/OurFleet'
 import AboutUs from './Pages/AboutUs'
@@ -16,7 +16,7 @@ import GWagonSpecial from './Pages/GWagonSpecial'
 const App = () => {
   return (
     <Router>
-      <SmoothScroll />
+      {/* <SmoothScroll /> */}
       <ScrollToTop />
       <div className="min-h-screen bg-slate-950">
         <Navbar/>

@@ -18,9 +18,9 @@ const Home = () => {
                 <Hero/>
             </div>
             <div ref={interactiveRef}>
-                {/* <Suspense fallback={<div className="min-h-[40vh] flex items-center justify-center text-white">Loading luxury showcase...</div>}> */}
+                <Suspense fallback={<div className="min-h-[40vh] flex items-center justify-center text-white">Loading luxury showcase...</div>}>
                   <InteractiveCar3D />
-                {/* </Suspense> */}
+                </Suspense>
             </div>
             <div ref={carouselRef}>
                 <LuxuryCarCarousel/>

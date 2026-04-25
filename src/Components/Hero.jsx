@@ -99,7 +99,8 @@ const Hero = () => {
           src={heroBg}
           alt="Hero Background"
           className="w-full h-full object-cover opacity-80"
-          loading="lazy"
+          loading="eager"
+          fetchPriority="high"
         />
         {/* Deep, rich lighting overlay that transitions into the dark theme */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#050505]/70 via-[#111]/80 to-[#050505]/95"></div>
